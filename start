@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+if [ "$#" -eq 1 ]; then
+  docker run -d -p $1:5000 simple-nlp-server
+else
+  docker run -d -p 5000:5000 simple-nlp-server
+fi
