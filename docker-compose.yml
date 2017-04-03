@@ -1,0 +1,11 @@
+version: '2'
+services:
+  nlp_server:
+    build: ./nlp
+    ports:
+      - "5000:5000"
+
+  data_retrieval:
+    build: ./data-retrieval
+    ports:
+      - "5001:5000"
