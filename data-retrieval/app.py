@@ -5,10 +5,12 @@ dotenv_path = join(dirname(__file__), '.env')
 load_dotenv(dotenv_path)
 
 from flask import Flask, request
+from flask_cors import CORS
 import json
 from reddit_data import *
 
 app = Flask(__name__)
+CORS(app)
 
 @app.route("/reddit/comments", methods=['POST'])
 def reddit_comments():
