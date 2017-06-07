@@ -1,8 +1,8 @@
 import os
 import praw
-print(os.environ)
-reddit = praw.Reddit(client_id=os.environ.get("CLIENT_ID"),
-                     client_secret=os.environ.get("CLIENT_SECRET"),
+
+reddit = praw.Reddit(client_id=os.environ.get("REDDIT_CLIENT_ID"),
+                     client_secret=os.environ.get("REDDIT_CLIENT_SECRET"),
                      user_agent='python_server:redditnlpanalyze:v1.0')
 
 def subreddit_comments(subreddit_name='all', comment_limit=50):
