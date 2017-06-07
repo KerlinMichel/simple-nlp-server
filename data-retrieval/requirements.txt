@@ -2,3 +2,4 @@ flask
 flask-cors
 praw
 python-dotenv
+bs4
